@@ -3,6 +3,7 @@ require './lib/activerecord_practice'
 require 'byebug'
 
 ALL_CUSTOMERS = [nil] + Customer.all.order('id')
+Time.zone = 'America/Los_Angeles'
 
 def check(actual, expected_ids)
   actual ||= []
